@@ -1,6 +1,27 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  for (let i = 0; i < array.length; i++) {
+    const noToBeAdded = target - array[ i ];
+    if (myNumbObject[ noToBeAdded ]) return true;
+    myNumbObject[ array[ i ] ] = true;
+  }
+  return false;
 }
+
+
+  function hasTargetSum(array, target) {
+    const myNumbObject = {} 
+  
+    for (const number of array) { 
+      const noToBeAdded = target - number;
+      if (myNumbObject[ noToBeAdded ]) return true;
+      myNumbObject[number] = true;
+    }
+    return false;
+  }
+
+
 
 /* 
   Write the Big O time complexity of your function here
