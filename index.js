@@ -1,5 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  function hasTargetSum(array, target) {
+    const myNumbObject = {} 
+  
+    for (const number of array) { 
+      const noToBeAdded = target - number;
+      if (myNumbObject[ noToBeAdded ]) return true;
+      myNumbObject[number] = true;
+    }
+    return false;
+  }
+
 }
 
 /* 
